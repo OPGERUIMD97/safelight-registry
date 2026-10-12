@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T05:00:21.625Z",
+  "generatedAt": "2026-10-12T14:46:51.397Z",
   "topic": "safelight-extension",
   "count": 47,
   "extensions": [
@@ -37,22 +37,6 @@
       }
     },
     {
-      "fullName": "anthonyreimche/Scopes",
-      "description": "Vectorscope and more for Safelight",
-      "stars": 1,
-      "createdAt": "2026-09-20T21:42:15Z",
-      "updatedAt": "2026-09-20T21:57:04Z",
-      "topics": [
-        "safelight-extension",
-        "safelight-panel"
-      ],
-      "avatarUrl": "https://avatars.githubusercontent.com/u/17351880?v=4",
-      "thumbnail": {
-        "url": "https://avatars.githubusercontent.com/u/17351880?v=4",
-        "custom": false
-      }
-    },
-    {
       "fullName": "anthonyreimche/Colour-Harmonizer",
       "description": "Darktable-style Colour Harmonizer for Safelight",
       "stars": 1,
@@ -61,6 +45,22 @@
       "topics": [
         "safelight-extension",
         "safelight-pipeline"
+      ],
+      "avatarUrl": "https://avatars.githubusercontent.com/u/17351880?v=4",
+      "thumbnail": {
+        "url": "https://avatars.githubusercontent.com/u/17351880?v=4",
+        "custom": false
+      }
+    },
+    {
+      "fullName": "anthonyreimche/Scopes",
+      "description": "Vectorscope and more for Safelight",
+      "stars": 1,
+      "createdAt": "2026-09-20T21:42:15Z",
+      "updatedAt": "2026-09-20T21:57:04Z",
+      "topics": [
+        "safelight-extension",
+        "safelight-panel"
       ],
       "avatarUrl": "https://avatars.githubusercontent.com/u/17351880?v=4",
       "thumbnail": {
@@ -101,22 +101,6 @@
       }
     },
     {
-      "fullName": "anthonyreimche/Contrast-Equalizer",
-      "description": "Contrast Equalizer panel for safelight",
-      "stars": 1,
-      "createdAt": "2026-06-28T02:09:57Z",
-      "updatedAt": "2026-09-09T04:23:54Z",
-      "topics": [
-        "safelight-extension",
-        "safelight-pipeline"
-      ],
-      "avatarUrl": "https://avatars.githubusercontent.com/u/17351880?v=4",
-      "thumbnail": {
-        "url": "https://repository-images.githubusercontent.com/1282612118/70630772-089e-4a94-94c6-ea7ca09f4332",
-        "custom": true
-      }
-    },
-    {
       "fullName": "anthonyreimche/Continuous-2D-Color-Editor",
       "description": "Continuous 2D color editor for Safelight",
       "stars": 1,
@@ -129,6 +113,22 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/17351880?v=4",
       "thumbnail": {
         "url": "https://repository-images.githubusercontent.com/1283510269/dc696547-d7ed-4401-bfc6-8bee00cf6321",
+        "custom": true
+      }
+    },
+    {
+      "fullName": "anthonyreimche/Contrast-Equalizer",
+      "description": "Contrast Equalizer panel for safelight",
+      "stars": 1,
+      "createdAt": "2026-06-28T02:09:57Z",
+      "updatedAt": "2026-09-09T04:23:54Z",
+      "topics": [
+        "safelight-extension",
+        "safelight-pipeline"
+      ],
+      "avatarUrl": "https://avatars.githubusercontent.com/u/17351880?v=4",
+      "thumbnail": {
+        "url": "https://repository-images.githubusercontent.com/1282612118/70630772-089e-4a94-94c6-ea7ca09f4332",
         "custom": true
       }
     },
