@@ -1,0 +1,43 @@
+# Validates kits.json (the Safelight welcome setup's starter kits) against the
+# verified list, the ban list and the published registry index. Runs whenever
+# any of them or the validator changes, including the registry rebuild's own
+# commits, so a kit naming a repo that dropped out of the catalog fails loudly.
+
+name: Validate starter kits
+
+on:
+  workflow_dispatch: {}
+  pull_request:
+    paths:
+      - kits.json
+      - verified.json
+      - banned.json
+      - registry.json
+      - validate-kits.mjs
+      - validate-kits.test.mjs
+      - .github/workflows/validate-kits.yml
+  push:
+    branches: [main]
+    paths:
+      - kits.json
+      - verified.json
+      - banned.json
+      - registry.json
+      - validate-kits.mjs
+      - validate-kits.test.mjs
+      - .github/workflows/validate-kits.yml
+
+# Read-only: the job only checks files out and runs the validator.
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node --test validate-kits.test.mjs
+      - run: node validate-kits.mjs

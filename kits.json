@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "kits": [
+    {
+      "id": "film",
+      "name": "Film looks",
+      "description": "Film stock simulation, alternative tone rendering, and your camera's own JPEG look.",
+      "icon": "film",
+      "extensions": [
+        { "repo": "anthonyreimche/Spektrafilm-Support", "name": "Spektrafilm Support", "summary": "Spectral film simulation with 26 film stocks and grain." },
+        { "repo": "anthonyreimche/Advanced-Rendering", "name": "Advanced Rendering", "summary": "More display transforms and render pipelines to choose per photo." },
+        { "repo": "anthonyreimche/JPG-Tone-Match", "name": "JPG Tone Match", "summary": "Match the decoded RAW to your camera's JPEG preview." }
+      ]
+    },
+    {
+      "id": "colour",
+      "name": "Colour work",
+      "description": "Precise colour editing, darktable-style colour tools, and scopes to check the result.",
+      "icon": "palette",
+      "extensions": [
+        { "repo": "anthonyreimche/Continuous-2D-Color-Editor", "name": "Continuous 2D Color Editor", "summary": "Pull hues and saturations around a 2D colour plane." },
+        { "repo": "anthonyreimche/Colour-Equaliser", "name": "Colour Equaliser", "summary": "Ansel-style hue, saturation and brightness rings." },
+        { "repo": "anthonyreimche/Colour-Harmonizer", "name": "Colour Harmony", "summary": "Nudge colours toward a harmony rule." },
+        { "repo": "anthonyreimche/Colour-Correction", "name": "Colour Correction", "summary": "Split-tone shadows and highlights on a colour plane." },
+        { "repo": "anthonyreimche/Scopes", "name": "Vectorscope", "summary": "A vectorscope and more for checking colour." }
+      ]
+    },
+    {
+      "id": "detail",
+      "name": "Detail and repair",
+      "description": "Noise, local contrast, lens faults and small repairs.",
+      "icon": "detail",
+      "extensions": [
+        { "repo": "anthonyreimche/Advanced-Denoise-Tools", "name": "Advanced Denoise", "summary": "Wavelet, bilateral and other denoisers." },
+        { "repo": "anthonyreimche/Contrast-Equalizer", "name": "Contrast Equalizer", "summary": "darktable's contrast equalizer for local contrast by detail size." },
+        { "repo": "anthonyreimche/Lens-Correction", "name": "Lens Correction", "summary": "Distortion, vignetting and chromatic aberration fixes." },
+        { "repo": "anthonyreimche/Moire-Reduction", "name": "Moiré Reduction", "summary": "Paint away colour moiré on fabrics and screens." },
+        { "repo": "anthonyreimche/Red-Eye-Correction", "name": "Red Eye Correction", "summary": "Automatic and manual red eye removal." },
+        { "repo": "anthonyreimche/Image-Warp", "name": "Image Warp", "summary": "Push, bloat, twist and more." }
+      ]
+    },
+    {
+      "id": "organise",
+      "name": "Organising",
+      "description": "Collections, keywords, metadata and duplicates for large libraries.",
+      "icon": "organise",
+      "extensions": [
+        { "repo": "anthonyreimche/Collections", "name": "Collections", "summary": "Collections and smart collections." },
+        { "repo": "anthonyreimche/Advanced-Library-Sort", "name": "Advanced Library Sort", "summary": "Find any shot in seconds." },
+        { "repo": "anthonyreimche/Hierarchical-Keywording", "name": "Hierarchical Keywording", "summary": "A keyword tree for tagging photos." },
+        { "repo": "anthonyreimche/Advanced-Exif-Tools", "name": "Advanced EXIF Tools", "summary": "Rename with tokens and edit metadata." },
+        { "repo": "anthonyreimche/Duplicate-Photo-Detector", "name": "Duplicate Photo Detector", "summary": "Flag near-duplicate shots. It never deletes." },
+        { "repo": "anthonyreimche/Virtual-Copies", "name": "Virtual Copies", "summary": "Edit several versions of one photo." }
+      ]
+    },
+    {
+      "id": "volume",
+      "name": "Events and volume",
+      "description": "Faster culling and editing across many photos, and galleries for clients.",
+      "icon": "speed",
+      "extensions": [
+        { "repo": "anthonyreimche/Speed-Edit", "name": "Speed Edit", "summary": "Hold a key and scroll to scrub sliders." },
+        { "repo": "anthonyreimche/Batch-Tools", "name": "Batch Tools", "summary": "Apply edits across many photos at once." },
+        { "repo": "anthonyreimche/Filmstrip", "name": "Filmstrip", "summary": "A vertical or horizontal filmstrip." },
+        { "repo": "anthonyreimche/Image-Comparison-Tools", "name": "Image Comparison", "summary": "See your edit against the untouched original." },
+        { "repo": "anthonyreimche/Web-Tools", "name": "Web Tools", "summary": "Web galleries and proofing for clients." }
+      ]
+    },
+    {
+      "id": "lightroom",
+      "name": "Coming from Lightroom",
+      "description": "Bring your presets and keep the habits you already have.",
+      "icon": "import",
+      "extensions": [
+        { "repo": "anthonyreimche/3rd-Party-Preset-Tools", "name": "Lightroom Preset Importer", "summary": "Import .xmp and .lrtemplate presets." },
+        { "repo": "anthonyreimche/Collections", "name": "Collections", "summary": "Collections and smart collections." },
+        { "repo": "anthonyreimche/Filmstrip", "name": "Filmstrip", "summary": "A vertical or horizontal filmstrip." }
+      ]
+    },
+    {
+      "id": "style",
+      "name": "Make it yours",
+      "description": "Restyle the controls and cursors, and tidy panels away.",
+      "icon": "style",
+      "extensions": [
+        { "repo": "anthonyreimche/Custom-Input-Styling", "name": "Input Styling", "summary": "Slider knobs, corners and checkbox styles." },
+        { "repo": "anthonyreimche/Custom-Cursors", "name": "Custom Cursors", "summary": "Cursor themes for the editor." },
+        { "repo": "anthonyreimche/Panel-Toggle", "name": "Panel Toggle", "summary": "Click-to-toggle panel visibility buttons." }
+      ]
+    }
+  ]
+}

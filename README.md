@@ -35,7 +35,7 @@ Recently-updated / Featured shelves.
 That catalog is `registry.json`, built by [`build-registry.mjs`](build-registry.mjs)
 and committed automatically by the
 [Build registry index](.github/workflows/build-registry.yml) workflow. It runs on a
-schedule (every 6h), on demand (the **Run workflow** button), and whenever
+schedule (hourly), on demand (the **Run workflow** button), and whenever
 `verified.json`, `banned.json` or the generator change. Banned repos/owners are
 excluded at build time as well as enforced live.
 
@@ -53,6 +53,26 @@ instead. To preview locally before committing:
 ```sh
 GITHUB_TOKEN=<a classic PAT, no scopes needed> node build-registry.mjs   # writes ./registry.json
 ```
+
+## Version records
+
+Each `registry.json` entry also says which version Safelight should offer, so
+the app's update checks never call the GitHub API (60 requests an hour without
+sign-in):
+
+- `latest`: the newest full GitHub Release whose `safelight.json` at the tag
+  agrees with the tag — `{ version, tag, from: "release", zips, minAppVersion? }`,
+  where `zips` lists up to three of the release's own `.zip` downloads. A repo
+  with no releases gets `{ version, from: "branch", minAppVersion? }` from its
+  default branch's `safelight.json`.
+- `prerelease`: present only when a pre-release is newer than `latest`.
+- `releaseError`: replaces both when the repo has full releases but none agrees
+  with its manifest (for example `"v1.3.0: safelight.json says 1.2.0"`).
+
+A repo with only pre-releases gets none of these, and the app asks GitHub
+itself. If GitHub can't be read for a repo during a build, its fields from the
+previous build are kept. The build commits only when the catalog's content
+changed, not on every run just because `generatedAt` moved.
 
 ## What "verified" means — and doesn't
 
@@ -138,3 +158,44 @@ stricter allowlist.
 - The `_comment` field in each file is ignored by the app — it's just a note for readers.
 - Users can turn on **Preferences ▸ Extensions ▸ Only verified extensions** to refuse
   anything not in `verified.json`. Bans always apply regardless of that setting.
+
+## Starter kits (`kits.json`)
+
+The Safelight welcome setup offers **starter kits**: groups of verified
+extensions by shooting style that people can install on first launch. The app
+fetches `kits.json` from this repo (raw.githubusercontent, cached for an hour),
+so kits change without an app release.
+
+```json
+{
+  "schema": 1,
+  "kits": [
+    {
+      "id": "film",
+      "name": "Film looks",
+      "description": "Film stock simulation and alternative tone rendering.",
+      "icon": "film",
+      "extensions": [
+        { "repo": "owner/repo", "name": "Manifest name", "summary": "One line.", "minAppVersion": "3.0.0" }
+      ]
+    }
+  ]
+}
+```
+
+Rules (checked by `validate-kits.mjs` in CI, and again by the app):
+
+- `id`: lowercase letters, digits and `-`, at most 32 characters, unique.
+- `name` 1–40 characters, `description` up to 160; extension `name` 1–48 (use
+  the extension's manifest name), `summary` up to 140.
+- `icon`: one of `film`, `palette`, `detail`, `organise`, `speed`, `import`,
+  `style`.
+- Every `repo` must be in `verified.json`, present in `registry.json`, and not
+  banned; listed once per kit. Kits may share repos.
+- At most 8 kits and 12 extensions per kit.
+- `minAppVersion` (optional, `x.y.z`) hides the extension in older app builds.
+- Only `"schema": 1` is read. A breaking format change must ship as a new file
+  name so released apps keep reading this one.
+
+Run `node --test validate-kits.test.mjs && node validate-kits.mjs` before
+pushing a change.

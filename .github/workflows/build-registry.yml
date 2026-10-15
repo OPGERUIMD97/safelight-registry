@@ -6,7 +6,7 @@ name: Build registry index
 
 on:
   schedule:
-    - cron: "0 */6 * * *" # every 6 hours; the app caches it for 1h
+    - cron: "0 * * * *" # hourly; the app caches the index for 1h
   workflow_dispatch: {} # manual "Run workflow" button
   push:
     branches: [main]
