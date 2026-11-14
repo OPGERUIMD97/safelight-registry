@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "platform": "x",
+      "url": "https://x.com/naval/status/1001",
+      "title": "Play long-term games with long-term people.",
+      "author": "@naval",
+      "text": "Play long-term games with long-term people.",
+      "savedAt": "2025-05-01T10:00:00.000Z",
+      "tags": ["wisdom"]
+    },
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/p/DEMOIMPORT1/",
+      "title": "atelier.clay",
+      "author": "atelier.clay",
+      "text": "Hand-thrown bowls, ash glaze.",
+      "savedAt": "2025-04-12T15:30:00.000Z",
+      "tags": ["craft"]
+    },
+    {
+      "platform": "facebook",
+      "url": "https://www.facebook.com/save/demo-listing",
+      "title": "Vintage cycling map — Utrecht",
+      "author": "",
+      "text": "Marketplace save for later.",
+      "savedAt": "2025-03-08T09:10:00.000Z",
+      "tags": ["maps"]
+    }
+  ]
+}
